@@ -29,6 +29,7 @@ async def on_message(message):
             quote_list = json.load(quote_file)
         await client.send_message(message.channel, random.choice(quote_list))
 
-
-client.run('MzU1ODAyMzAwMzUyMjk5MDEw.DJSGQw.Lc1sFWWyguwjknssbrybqw5pE2A')
+with open("..\Local\key.json", "r") as key_file:
+    key = json.load(key_file)
+client.run(key)
 

@@ -18,6 +18,8 @@ async def on_message(message):
     elif message.content.startswith('!quote'):
         await client.send_message(message.channel, Quote.random())
 
+with open("..\Local\key.json", "r") as key_file:
+    key = json.load(key_file)
+client.run(key)
 
-client.run('MjQyMzA3OTU2OTMzMTMyMjg4.DLSApg.w5I3VxX4UvzllAWmUmt09bNw45A')
 
